@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Terminal emulator">
+			<action name="Execute">
+				<execute>x-terminal-emulator</execute>
+			</action>
+		</item>
+		<item label="Web browser">
+			<action name="Execute">
+				<execute>x-www-browser</execute>
+			</action>
+		</item>
+		<item label="Sublime">
+			<action name="Execute">
+				<execute>subl</execute>
+			</action>
+		</item>
+		<item label="File Browser">
+			<action name="Execute">
+				<execute>nautilus</execute>
+			</action>
+		</item>
+		<!-- This requires the presence of the 'menu' package to work -->
+		<separator/>
+		<item label="Power Stats">
+			<action name="Execute">
+				<execute>gnome-power-statistics</execute>
+			</action>
+		</item>
+		<item label="System Monitor">
+			<action name="Execute">
+				<execute>gnome-system-monitor</execute>
+			</action>
+		</item>
+		<menu id="/Debian"/>
+		<menu id="client-list-menu"/>
+		<separator/>
+		<menu id="root-menu-223357" label="Configuration">
+			<item label="Openbox menu">
+				<action name="Execute">
+					<execute>obmenu</execute>
+				</action>
+			</item>
+			<item label="Openbox config">
+				<action name="Execute">
+					<execute>obconf</execute>
+				</action>
+			</item>
+			<item label="Edit .conkyrc">
+				<action name="Execute">
+					<execute>gnome-terminal -x editor ~/.conkyrc</execute>
+				</action>
+			</item>
+			<item label="Edit .tint2rc">
+				<action name="Execute">
+					<execute>gnome-terminal -x editor ~/.tint2rc</execute>
+				</action>
+			</item>
+			<item label="Edit rc.xml">
+				<action name="Execute">
+					<execute>gnome-terminal -x editor ~/.config/openbox/rc.xml</execute>
+				</action>
+			</item>
+			<item label="Edit .gtkrc">
+				<action name="Execute">
+					<execute>gnome-terminal -x editor ~/.gtkrc-2.0</execute>
+				</action>
+			</item>
+			<item label="Edit autostart">
+				<action name="Execute">
+					<execute>gnome-terminal -x editor ~/.config/openbox/autostart</execute>
+				</action>
+			</item>
+			<separator/>
+			<item label="Gnome Settings">
+				<action name="Execute">
+					<execute>gnome-control-center</execute>
+				</action>
+			</item>
+			<item label="XScreensaver">
+				<action name="Execute">
+					<execute>xscreensaver-demo</execute>
+				</action>
+			</item>
+			<item label="Fans and temperature">
+				<action name="Execute">
+					<execute>gnome-terminal -x sudo editor /etc/macfanctl.conf</execute>
+				</action>
+			</item>
+		</menu>
+		<item label="Restart Openbox">
+			<action name="Restart"/>
+		</item>
+		<separator/>
+		<item label="Lock Screen">
+			<action name="Execute">
+				<execute>xscreensaver-command -lock</execute>
+			</action>
+		</item>
+		<item label="Suspend">
+			<action name="Execute">
+				<execute>gnome-terminal -x sudo pm-suspend &amp;&amp; xscreensaver-command --lock</execute>
+			</action>
+		</item>
+		<item label="Exit">
+			<action name="Exit"/>
+		</item>
+	</menu>
+</openbox_menu>

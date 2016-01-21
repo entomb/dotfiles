@@ -1,0 +1,11 @@
+[user]
+	name = Jonathan Tavares
+	email = jonathan@impossible.com
+[color]
+	ui = true
+	branch = true
+	diff = true
+	satus = true
+	interactive = true
+[core]
+	editor = vim

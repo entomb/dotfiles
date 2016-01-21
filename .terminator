@@ -1,0 +1,30 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  title_transmit_bg_color = "#525252"
+[keybindings]
+[profiles]
+  [[default]]
+    palette = "#26444d:#d30102:#859900:#b58900:#6c71c4:#d33682:#2aa198:#839496:#586e75:#cb4b16:#859900:#b58900:#268bd2:#d33682:#2aa198:#e4d9bb"
+    background_darkness = 0.83
+    urgent_bell = True
+    cursor_color = "#649f9f"
+    foreground_color = "#eee8d5"
+    icon_bell = False
+    font = DejaVu Sans Mono 10
+    background_color = "#1b2b30"
+  [[Prod]]
+    palette = "#272727:#e53b3b:#64ac1f:#dcc046:#6794cd:#97689e:#2cc2c4:#b1b1b1:#536886:#d9836c:#95d358:#e0d790:#93bde9:#daa9d5:#abc8c8:#eeeeec"
+  [[Vagrant]]
+    icon_bell = False
+    background_color = "#373737"
+    foreground_color = "#ff7442"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]

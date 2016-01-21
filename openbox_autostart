@@ -1,0 +1,32 @@
+#GNOME config tools...
+if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+  /usr/lib/openbox/gnome-settings-daemon &
+elif which gnome-settings-daemon >/dev/null; then
+  gnome-settings-daemon &
+fi
+
+#boots tint2 menu
+tint2 -c ~/.tint2rc &
+
+#boots conky sidebar
+#conky &
+
+#clipboard manager
+clipit &
+
+#screesaver
+xscreensaver -nosplash &
+
+#btooth manager
+#bluetooth-applet &
+
+#automount
+/usr/lib/gnome-settings-daemon/gnome-fallback-mount-helper &
+
+#SSH agent
+#ssh-agent -s & ssh-add &
+
+
+#volume tray icon
+(sleep 5s && gnome-sound-applet) & 
+#(sleep 5s && volwheel) &
