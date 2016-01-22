@@ -1,0 +1,77 @@
+//settings
+{
+    "always_show_minimap_viewport": true,
+    "bold_folder_labels": true,
+    "caret_extra_bottom": 1,
+    "caret_extra_top": 1,
+    "caret_extra_width": 1,
+    "color_scheme": "Packages/Color Scheme - Default/Monokai Bright.tmTheme",
+    "draw_minimap_border": true,
+    "file_exclude_patterns":
+    [
+        "*.min.js*",
+        "*.min.css*",
+        "*.map",
+        "*.pyc",
+        "*.pyo",
+        "*.exe",
+        "*.dll",
+        "*.obj",
+        "*.o",
+        "*.a",
+        "*.lib",
+        "*.so",
+        "*.dylib",
+        "*.ncb",
+        "*.sdf",
+        "*.suo",
+        "*.pdb",
+        "*.idb",
+        ".DS_Store",
+        "*.class",
+        "*.psd",
+        "*.db",
+        "*.sublime-workspace"
+    ],
+    "font_face": "DejaVu Sans Mono",
+    "font_size": 10,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "margin": 0,
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "word_wrap": false
+}
+
+
+// Keybinds:
+[
+    { "keys": ["ctrl+d"], "command": "duplicate_line" }, 
+    { "keys": ["ctrl+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
+    { "keys": ["ctrl+shift+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+
+    { "keys": ["alt+up"], "command": "upper_case" },
+    { "keys": ["alt+down"], "command": "lower_case" },
+]
+
+ 
+//packages
+{ 
+    "installed_packages":
+    [
+        //"Color Highlighter", 
+        //"ConvertToUTF8",
+        //"Git",
+        //"Github Tools",
+        //"HTMLBeautify",
+        //"Jade",
+        //"Monokai Extended",
+        //"Monokai Gray",
+        //"Monokai Neue",
+        //"Package Control",
+        //"SideBarEnhancements",
+        //"Terminal"
+    ]
+}
