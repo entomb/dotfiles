@@ -1,11 +1,52 @@
 [user]
-	name = Jonathan Tavares
-	email = jonathan@impossible.com
-[color]
-	ui = true
-	branch = true
-	diff = true
-	satus = true
-	interactive = true
+  email = jonathan@wearesingular.com
+  name = Jonathan Tavares
+
+
+[alias]
+  ignore = update-index --assume-unchanged
+  unignore = update-index --no-assume-unchanged
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
+  lg = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lgdiff = log --oneline --graph --first-parent --decorate --left-right 
+
+[branch]
+  autosetuprebase = always
+  # autosetupmerge = always
+[pull]
+  rebase = true
 [core]
-	editor = vim
+  editor = vim
+#[sequence]
+#	editor = code
+[push]
+  default = upstream
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = auto
+  pager = true 
+
+[color "status"]
+  added = green
+  changed = blue
+  untracked = magenta
+  deleted = red
+
+[advice]
+  #pushUpdateRejected = false
+  #pushNonFFCurrent = false
+  #pushNonFFMatching = false
+  #pushAlreadyExists = false
+  #pushFetchFirst = false
+  #pushNeedsForce = false
+  statusHints = false
+  statusUoption = false
+  #commitBeforeMerge = false
+  #resolveConflict = false
+  #implicitIdentity = false
+  #detachedHead = false
+  #amWorkDir = false
+  rmHints = false
