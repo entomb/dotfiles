@@ -77,8 +77,14 @@ HISTFILESIZE=2000
 alias reload="bash-it reload"
 alias gg="git status"
 alias gl="git lg"
-alias clear="echo -ne \"\033c\""
-alias json="fx"
+alias gll="git log --graph --pretty=oneline --abbrev-commit"
+# alias clear="echo -ne \"\033c\""
+alias json="fx
+alias l='ls -a'
+alias ll='ls -al'
+alias ls='ls --color=auto --group-directories-first'
+alias gco='git checkout'
+
 
 export EDITOR='vim'
 export VISUAL='vim'
@@ -88,8 +94,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-export ANDROID_SDK=/mnt/c/Users/jtavares/AppData/Local/Android/Sdk
-export PATH="$PATH:$HOME/.yarn/bin"
-export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
-export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
-export DOCKER_HOST=tcp://localhost:2375
