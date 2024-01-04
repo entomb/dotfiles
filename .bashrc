@@ -79,7 +79,7 @@ alias gg="git status"
 alias gl="git lg"
 alias gll="git log --graph --pretty=oneline --abbrev-commit"
 # alias clear="echo -ne \"\033c\""
-alias json="fx
+alias json="fx"
 alias l='ls -a'
 alias ll='ls -al'
 alias ls='ls --color=auto --group-directories-first'
