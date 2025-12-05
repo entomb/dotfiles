@@ -23,6 +23,8 @@
 .netrc
 .authinfo
 .curlrc
+.npmrc
+.yarnrc
 
 # Cloud provider configs with potential credentials
 .azure/
