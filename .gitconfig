@@ -4,11 +4,12 @@
 
 
 [alias]
+  fix = commit --amend
   ignore = update-index --assume-unchanged
   unignore = update-index --no-assume-unchanged
   ignored = !git ls-files -v | grep "^[[:lower:]]"
   lg = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-  lgdiff = log --oneline --graph --first-parent --decorate --left-right 
+  lgdiff = log --oneline --graph --first-parent --decorate --left-right
 
 [branch]
   autosetuprebase = always
@@ -17,17 +18,19 @@
   rebase = true
 [core]
   editor = vim
+  pager = less
 #[sequence]
 #	editor = code
 [push]
   default = upstream
+  autoSetupRemote = true
 [color]
   diff = auto
   status = auto
   branch = auto
   interactive = auto
   ui = auto
-  pager = true 
+  pager = true
 
 [color "status"]
   added = green
@@ -42,6 +45,7 @@
   #pushAlreadyExists = false
   #pushFetchFirst = false
   #pushNeedsForce = false
+  skippedCherryPicks = false
   statusHints = false
   statusUoption = false
   #commitBeforeMerge = false
@@ -50,3 +54,10 @@
   #detachedHead = false
   #amWorkDir = false
   rmHints = false
+[init]
+  defaultBranch = main
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs clean -- %f
+  process = git-lfs filter-process
+  require = true
