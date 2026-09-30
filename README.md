@@ -1,7 +1,7 @@
 # dotfiles
 
 A reference collection of personal configuration for Bash, Bash-it, Git,
-Neovim, herdr, bat, OpenCode and a Niri desktop with Foot and Noctalia.
+Vim, Neovim, herdr, bat, OpenCode and a Niri desktop with Foot and Noctalia.
 Older configurations are kept in `archive/`.
 
 Adapt and copy or link the files you need. Applications and plugins are installed

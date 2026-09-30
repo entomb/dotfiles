@@ -1,4 +1,4 @@
-// Niri desktop, DSI-1 display and tablet rotation.
+// Niri desktop configuration.
 // Noctalia manages the optional generated accent.kdl.
 input {
     keyboard {
@@ -47,17 +47,6 @@ gestures {
     hot-corners {
         off
     }
-}
-
-output "DSI-1" {
-
-    mode "1200x1920@60.000"
-
-    scale 1.25
-
-    transform "270"
-
-    position x=0 y=0
 }
 
 layout {
@@ -116,7 +105,6 @@ environment {
 
 spawn-at-startup "noctalia"
 
-spawn-at-startup "iio-niri" "listen" "--monitor" "DSI-1" "--transform" "normal" "90" "180" "270"
 
 hotkey-overlay {
     skip-at-startup
@@ -235,7 +223,7 @@ binds {
     Mod+Shift+S hotkey-overlay-title="Open Wallpaper Picker" { spawn "noctalia" "msg" "panel-toggle" "wallpaper"; }
     Mod+V hotkey-overlay-title="Open Clipboard History" { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
     Mod+E hotkey-overlay-title="Open Files" { spawn "nautilus"; }
-    Mod+N hotkey-overlay-title="Open Chromium" { spawn "/usr/bin/chromium" "--load-extension=/home/jtavares/.cache/noctalia/chromium/theme" "--disable-features=DisableLoadExtensionCommandLineSwitch"; }
+    Mod+N hotkey-overlay-title="Open Chromium" { spawn-sh "exec chromium --load-extension=\"$HOME/.cache/noctalia/chromium/theme\" --disable-features=DisableLoadExtensionCommandLineSwitch"; }
     Mod+Alt+L hotkey-overlay-title="Lock Screen" { spawn "noctalia" "msg" "session" "lock"; }
     Mod+Shift+Q hotkey-overlay-title="Open Session Menu" { spawn "noctalia" "msg" "panel-toggle" "session"; }
     Alt+Tab hotkey-overlay-title="Switch Windows" { spawn "noctalia" "msg" "window-switcher"; }
@@ -391,9 +379,8 @@ binds {
 
     Mod+Shift+P { power-off-monitors; }
 
-    Mod+Ctrl+Shift+A hotkey-overlay-title="Tablet Mode (rotation + OSK size)" {
-        spawn "tablet-mode"
-    }
 }
 
 include optional=true "accent.kdl"
+
+include optional=true "local.kdl"

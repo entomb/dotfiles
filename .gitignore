@@ -59,6 +59,7 @@ local_config.sh
 *.log
 .config/nvim/lua/matugen.lua
 .config/niri/accent.kdl
+.config/niri/local.kdl
 .config/foot/themes/noctalia
 .config/herdr/noctalia-colors.toml
 .config/herdr/session.json
