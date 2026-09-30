@@ -1,0 +1,29 @@
+[dock]
+enabled = false
+
+[bar]
+order = ["default", "taskbar"]
+
+[bar.taskbar]
+enabled = true
+position = "bottom"
+thickness = 22
+padding = 4
+margin_edge = 0
+margin_ends = 0
+radius = 0
+reserve_space = true
+shadow = true
+start = []
+center = ["taskbar"]
+end = []
+
+[widget.taskbar]
+pinned = []
+show_all_outputs = false
+only_active_workspace = true
+group_by_workspace = false
+icon_scale = 1
+item_spacing = 3
+show_window_title = false
+show_active_indicator = true

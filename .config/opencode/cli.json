@@ -1,0 +1,14 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "session": {
+    "sidebar": "hide"
+  },
+  "theme": {
+    "name": "matugen",
+    "mode": "system"
+  },
+  "tabs": {
+    "layout": "horizontal",
+    "mode": "on"
+  }
+}

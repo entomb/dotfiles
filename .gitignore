@@ -10,6 +10,11 @@
 # Files that often contain secrets
 .env
 .env.*
+# Per-machine secrets, sourced by .bashrc. This is a dotfile, not a template:
+# the committed file is .secret.example. Keep this rule.
+.secret
+.secret.*
+!.secret.example
 *.key
 *.pem
 *.p12
@@ -46,3 +51,15 @@ Thumbs.db
 # Local testing/temporary
 test_secrets.sh
 local_config.sh
+
+# Machine overrides and generated editor state
+.gitconfig.local
+
+# Generated palettes, logs and runtime state
+*.log
+.config/nvim/lua/matugen.lua
+.config/niri/accent.kdl
+.config/foot/themes/noctalia
+.config/herdr/noctalia-colors.toml
+.config/herdr/session.json
+.config/herdr/*.sock

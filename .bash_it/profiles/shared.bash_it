@@ -1,0 +1,24 @@
+# Shared Bash-it configuration; loaded by Bash-it's native profile command.
+aliases general
+aliases node
+
+plugins base
+plugins colors
+plugins direnv
+plugins zoxide
+plugins fzf
+plugins git
+plugins man
+plugins extract
+plugins docker-compose
+
+completion system
+completion bash-it
+completion aliases
+completion git
+completion npm
+completion docker
+completion docker-compose
+completion herdr
+completion codex
+completion opencode

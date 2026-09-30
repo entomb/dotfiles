@@ -1,0 +1,26 @@
+onboarding = false
+
+[keys]
+goto = "prefix+p"
+new_tab = "prefix+n"
+next_tab = ""
+previous_tab = ""
+split_horizontal = "prefix+h"
+
+[ui]
+# Foot handles local clipboard selection, including remote panes.
+copy_on_select = false
+hide_tab_bar_when_single_tab = true
+show_agent_labels_on_pane_borders = true
+agent_panel_sort = "priority"
+status_indicators = "symbols"
+
+[ui.toast]
+delivery = "system"
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[experimental]
+kitty_graphics = true

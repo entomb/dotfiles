@@ -1,7 +1,55 @@
 [user]
-  email = jonathan@wearesingular.com
   name = Jonathan Tavares
+  email = jonathan@wearesingular.com
 
+[init]
+  defaultBranch = main
+
+[core]
+  editor = nvim
+  # delta, not less: it syntax-highlights and understands word-level moves
+  # (delta --version to confirm it is on PATH).
+  pager = delta
+
+[push]
+  default = upstream
+  autoSetupRemote = true
+
+[pull]
+  rebase = true
+
+[branch]
+  autosetuprebase = always
+
+[merge]
+  # Shows the common ancestor line as well as ours and theirs, so a three-way
+  # conflict is readable without having to reconstruct it.
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
+[interactive]
+  # Side-by-side highlighting only; the pager still does the paging.
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  line-numbers = true
+
+[color]
+  ui = auto
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  pager = true
+
+[color "status"]
+  added = green
+  changed = blue
+  untracked = magenta
+  deleted = red
 
 [alias]
   fix = commit --amend
@@ -11,53 +59,19 @@
   lg = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
   lgdiff = log --oneline --graph --first-parent --decorate --left-right
 
-[branch]
-  autosetuprebase = always
-  # autosetupmerge = always
-[pull]
-  rebase = true
-[core]
-  editor = vim
-  pager = less
-#[sequence]
-#	editor = code
-[push]
-  default = upstream
-  autoSetupRemote = true
-[color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
-  ui = auto
-  pager = true
-
-[color "status"]
-  added = green
-  changed = blue
-  untracked = magenta
-  deleted = red
-
 [advice]
-  #pushUpdateRejected = false
-  #pushNonFFCurrent = false
-  #pushNonFFMatching = false
-  #pushAlreadyExists = false
-  #pushFetchFirst = false
-  #pushNeedsForce = false
+  # The advice is correct and just restates what the output already showed.
   skippedCherryPicks = false
   statusHints = false
   statusUoption = false
-  #commitBeforeMerge = false
-  #resolveConflict = false
-  #implicitIdentity = false
-  #detachedHead = false
-  #amWorkDir = false
   rmHints = false
-[init]
-  defaultBranch = main
+
 [filter "lfs"]
   clean = git-lfs clean -- %f
-  smudge = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
-  require = true
+  required = true
+
+# Untracked identity, trust exceptions and machine-specific tool choices.
+[include]
+  path = ~/.gitconfig.local

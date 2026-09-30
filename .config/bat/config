@@ -1,0 +1,5 @@
+# bat reads command-line options here, one per line (not TOML).
+--theme="Catppuccin Mocha"
+--paging=auto
+--style=default
+--strip-ansi=never
